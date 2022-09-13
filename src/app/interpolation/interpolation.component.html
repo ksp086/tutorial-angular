@@ -1,0 +1,39 @@
+<!-- 1 -->
+<!-- invoking a method in the component -->
+{{getTitle()}}
+
+<!-- 2 -->
+<!-- concatenating two strings -->
+<p>{{'Hello' + 'World'}}</p>
+
+<!-- 3 -->
+<!-- mathematical operations -->
+<p>100*80 = {{100*80}}</p>
+<p>Largest of 100 and 200: {{max(100, 200)}}</p>
+
+<!-- 4 -->
+<!-- bind to an element property -->
+<!-- 4.1 -->
+<!-- image source -->
+<div>
+    <img src="{{imageUrl}}" alt="Tree">
+</div>
+<!-- 4.2 -->
+<!-- keyup event -->
+<label>Enter ur name: </label>
+<input type="text" (keyup)="0" #name> 
+<!-- #name template reference variable -->
+<p>Welcome {{name.value}}</p>
+
+<!-- 5 -->
+<!-- template reference variable -->
+<h2>Electronic Gadgets</h2>
+<p *ngFor="let d of items">
+    <span>{{d.id + '. '}}</span>
+    <span>{{d.name}}</span>
+</p>
+
+<!-- 6 -->
+<!-- pipes -->
+<p>Uppercase Pipe: {{upper_case|uppercase}}</p>
+<p>JSON Pipe: {{json_pipe|json}}</p>
