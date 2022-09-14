@@ -1,0 +1,24 @@
+<h1 [innerText]="title"></h1>
+
+<h2>Click Event</h2>
+
+<!-- 1 -->
+<!-- click -->
+<button (click)="clickMe()">Click Me</button>
+<p>You have clicked Click Me button {{clickCount}} times</p>
+
+<!-- 2 -->
+<!-- on-click -->
+<button on-click="clickMe()">Click Me</button>
+<p>You have clicked Click Me button {{clickCount}} times</p>
+
+<!-- 3 -->
+<!-- multiple event handlers -->
+<button on-click="clickMe(); clickCount2=clickCount">Click Me</button>
+<p> ClickCount2: {{clickCount2 - 1}}</p>
+
+<!-- 4 -->
+<!-- template reference variable -->
+<h2>Template Reference Variable</h2>
+<input #el (input)="handleInput(el)">
+<p>You have entered {{val}}</p>

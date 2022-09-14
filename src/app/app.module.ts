@@ -7,6 +7,7 @@ import { FirstComponentComponent } from './first-component/first-component.compo
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { InterpolationComponent } from './interpolation/interpolation.component';
 import { PropertyBinding2Component } from './property-binding2/property-binding2.component';
+import { EventBindingComponent } from './event-binding/event-binding.component';
 
 @NgModule({ // decorator
   declarations: [
@@ -14,7 +15,8 @@ import { PropertyBinding2Component } from './property-binding2/property-binding2
     FirstComponentComponent,
     PropertyBindingComponent,
     InterpolationComponent,
-    PropertyBinding2Component
+    PropertyBinding2Component,
+    EventBindingComponent
   ],
   imports: [
     BrowserModule,
