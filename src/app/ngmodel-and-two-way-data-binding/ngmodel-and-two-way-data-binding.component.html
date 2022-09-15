@@ -1,0 +1,39 @@
+<h1>NgModel And Two Way Data Binding Tutorial</h1>
+
+<!-- 1 -->
+<!-- two way property binding - separately -->
+<h2> Property And Event Binding Used Separately </h2>
+<label>Enter Your Name: </label>
+<!--  -->
+<!-- ERROR -->
+<!-- <input type="text" [value]="name" (input)="name = $event.target.value"> -->
+<!-- END_OF_ERROR_SECTION -->
+<!--  -->
+<!-- $event.target.value - generate error -->
+<!-- ERROR: Property ‘value’ does not exist on type ‘EventTarget’ -->
+<!-- REASON: fullTemplateTypeCheck is set to true under angularCompilerOptions in the tsconfig.json 
+     The error is due to the fact that the value property is not guaranteed to exist in the $event.target -->
+<!-- SOLUTION: $any($event.target).value
+     or set fullTemplateTypeCheck to false in tsconfig.json -->
+<p>You entered: {{name}}</p>
+<button (click)="clearName()">Clear</button>
+
+<!-- 2 -->
+<!-- [()] banana in a box -->
+<!-- ngModel -->
+<!-- forms module -->
+<h2>Using ngModel</h2>
+<label>Enter Your Name: </label>
+<input type="text" name="value" [(ngModel)]="value">
+<p>You entered: {{value}}</p>
+<button (click)="clearValue()">Clear</button>
+
+<!-- 3 -->
+<!-- custom two way binding -->
+<h2>Custom Two Way Binding</h2>
+<div>
+    <p>
+        Count: {{count}}
+    </p>
+    <button (click)="increment()">Increment</button>
+</div>
