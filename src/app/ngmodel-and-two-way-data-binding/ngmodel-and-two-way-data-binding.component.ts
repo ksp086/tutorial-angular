@@ -9,7 +9,7 @@ import {Input, Output, EventEmitter} from '@angular/core';
 })
 export class NgmodelAndTwoWayDataBindingComponent implements OnInit {
   // 1
-  // two way property binding - separately
+  // two way binding - separately
   name = "";
   clearName() {
     this.name = "";
